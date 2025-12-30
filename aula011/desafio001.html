@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descubra sua nacionalidade</h1>
+    <h2>Qual o seu pais de origem?</h2>
+    <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+         function calcular() {
+            var txtn = window.document.querySelector('#txtnac')
+            var res = window.document.querySelector('#res')
+            var pais = txtn.value.toLowerCase()
+        
+       
+        if(pais == "Brasil") {
+            res.innerHTML = `<p>Você é brasileiro</p>`
+        }else{
+            res.innerHTML = `<p>Você é estrangeiro</p>`
+        }
+    }
+    </script>
+</body>
+</html>
